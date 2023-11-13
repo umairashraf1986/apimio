@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Selection Mode</title>
+  <link rel="stylesheet" href="togglePage-styles.css">
+</head>
+<body>
+
+<!-- Checkbox to toggle selection mode -->
+<div>Selection Mode</div>
+<label class="switch">
+  <input type="checkbox" id="selectionModeCheckbox" checked>
+  <span class="slider round"></span>
+</label>
+
+<!-- Script for toggling selection mode via API -->
+<script>
+  document.getElementById('selectionModeCheckbox').addEventListener('change', function () {
+    const selectionMode = this.checked;
+    setSelectionMode(selectionMode);
+  });
+
+  function setSelectionMode(selectionMode) {
+    // Simple local API to set the selection mode status
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:3000/selection-mode', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    xhr.send(JSON.stringify({ selectionMode }));
+  }
+</script>
+
+</body>
+</html>
