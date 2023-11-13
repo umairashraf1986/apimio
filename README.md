@@ -3,7 +3,7 @@
 ## Installation
 * Clone this repo
 * Run 'npm install' in the root directory
-* Run 'npm start'
+* Run 'npm start' or 'node server.js'
 
 ## Toggle 'Selection Mode'
 /togglePage.html
