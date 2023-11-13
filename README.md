@@ -1,6 +1,7 @@
 # apimio
 
 ## Installation
+* Clone this repo
 * Run 'npm install' in the root directory
 * Run 'npm start'
 
